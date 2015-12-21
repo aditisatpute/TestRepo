@@ -1,0 +1,39 @@
+<apex:page controller="CustomController">
+<!-- Include Bootstrap Datepicker -->
+<apex:stylesheet value="{!URLFOR($Resource.css, '/css/datepicker.css')}" />
+<apex:stylesheet value="{!URLFOR($Resource.css, '/css/bootstrap.css')}" />
+<apex:includeScript value="{!URLFOR($Resource.js, '/js/jquery-1.9.1.min.js')}" />
+<apex:includeScript value="{!URLFOR($Resource.js, '/js/bootstrap-datepicker.js')}" />
+<apex:includeScript value="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css"/>
+
+<style type="text/css">
+#dateRangeForm .form-control-feedback {
+    top: 0;
+    right: -15px;
+}
+</style>
+
+<apex:form id="dateRangeForm">
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Select Date : </label>
+        <div class="col-xs-5 date">
+            <div class="input-group input-append date" id="dateRangePicker">
+                <apex:inputText value="{!dateValue}" id="date" html-class="form-control" />
+                <span class="input-group-addon add-on" onclick="invokeDatePicker()"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+        </div>
+        <apex:commandButton id="saveBtn" action="{!save}" value="Save"/>
+    </div>
+</apex:form>
+
+<script>
+function invokeDatePicker() {
+	$('#dateRangePicker')
+        .datepicker({
+            format: 'mm/dd/yyyy',
+            startDate: '01/01/2010',
+            endDate: '12/30/2020'
+        });
+}
+</script>
+</apex:page>

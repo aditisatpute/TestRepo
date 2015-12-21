@@ -1,0 +1,9 @@
+<apex:page controller="CustomController">  
+  <apex:form >
+        <apex:inputText value="{!dateValue}" id="aName"/>
+        <a href="javascript:DatePicker.pickDate(true, '{!$Component.aName}', false);" >
+            <img src="data:image/gif;base64,R0lGODlhEAAQAMQAANvn8klVa+bt9Onx9lRpiUWHuXaYtT13uVJgea/S5OPr8ENLXPL1+HiOqerv+m+NrYOqxYyzzFp5npa805/E2KjL3ikxQz5FVUHUD+fv93uhvercjYXaaer0/7jT7P///yH5BAAAAAAALAAAAAAQABAAAAWJ4CeOZCkCSVJRUwRphvFIjZgAGaDvevYRtk5heCgaDz9RZeDpNJ/OTvJDyXg8m+x1+0GIJo5mdhNtdkWRMFbLaXs+ARFEAG1yMBxp/KNRtDlbf28LIhoCd3l1UoQfBoduW1wXIg8MilAfkx8SAAwCnwqhCgADHxYiDQSqCAgBAQsLFxcWXia2IyEAOw==" 
+                 width="20" height="20" alt="Calendar Icon" border="0" id="datePickerImage1" />
+        </a>
+  </apex:form>
+</apex:page>

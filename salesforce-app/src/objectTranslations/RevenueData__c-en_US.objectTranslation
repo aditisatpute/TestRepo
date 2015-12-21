@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <value>Revenue Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Revenue Data</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel External Id --></label>
+        <name>ChannelExtId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conversion Rate Reference --></label>
+        <name>ConversionRate_Ref__c</name>
+        <relationshipLabel><!-- Revenue Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Currency --></label>
+        <name>Currency__c</name>
+        <picklistValues>
+            <masterLabel>CHF</masterLabel>
+            <translation><!-- CHF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EUR</masterLabel>
+            <translation><!-- EUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USD</masterLabel>
+            <translation><!-- USD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Marketer Statistics Reference --></label>
+        <name>MarketerStatistics_Ref__c</name>
+        <relationshipLabel><!-- Revenue Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Marketer --></label>
+        <name>Marketer__c</name>
+        <picklistValues>
+            <masterLabel>XYZ</masterLabel>
+            <translation><!-- XYZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Youtube</masterLabel>
+            <translation><!-- Youtube --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>cMedia</masterLabel>
+            <translation><!-- cMedia --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Raw Amount --></label>
+        <name>RawAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valid Date --></label>
+        <name>ValidDate__c</name>
+    </fields>
+    <layouts>
+        <layout>Revenue Data Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

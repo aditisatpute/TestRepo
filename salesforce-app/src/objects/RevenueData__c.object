@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <formula>IF(NOT(ISBLANK(ConversionRate_Ref__r.Conversion_Rate__c)),  RawAmount__c *  ConversionRate_Ref__r.Conversion_Rate__c , null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount</label>
+        <precision>18</precision>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ChannelExtId__c</fullName>
+        <externalId>true</externalId>
+        <label>Channel External Id</label>
+        <length>32</length>
+        <type>Text</type>
+    </fields>
+    <fields>
+        <fullName>ConversionRate_Ref__c</fullName>
+        <label>Conversion Rate Reference</label>
+        <referenceTo>CurrencyTable__c</referenceTo>
+        <relationshipLabel>Revenue Data</relationshipLabel>
+        <relationshipName>Revenue_Data</relationshipName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Currency__c</fullName>
+        <label>Currency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MarketerStatistics_Ref__c</fullName>
+        <label>Marketer Statistics Reference</label>
+        <referenceTo>MarketerStatistics__c</referenceTo>
+        <relationshipLabel>Revenue Data</relationshipLabel>
+        <relationshipName>Revenue_Data</relationshipName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Marketer__c</fullName>
+        <label>Marketer</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Youtube</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XYZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>cMedia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RawAmount__c</fullName>
+        <label>Raw Amount</label>
+        <precision>18</precision>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ValidDate__c</fullName>
+        <label>Valid Date</label>
+        <type>Date</type>
+    </fields>
+    <label>Revenue Data</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>ChannelExtId__c</columns>
+        <columns>Amount__c</columns>
+        <columns>ConversionRate_Ref__c</columns>
+        <columns>MarketerStatistics_Ref__c</columns>
+        <columns>Marketer__c</columns>
+        <columns>Currency__c</columns>
+        <columns>RawAmount__c</columns>
+        <columns>ValidDate__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Revenue Data Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Revenue Data</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
